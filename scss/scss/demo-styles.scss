@@ -1,0 +1,19 @@
+
+$amazinggreen: #00ff00;
+$brilliantpink: #ff3399;
+
+@mixin square($size, $color) {
+	display: block;
+	height: $size;
+	width: $size;
+	background-color: $color;
+}
+
+#smallgreensquare {
+	@include square(50px, $amazinggreen);
+}
+
+#largepinksquare {
+	@include square(170px, $brilliantpink);
+}
+

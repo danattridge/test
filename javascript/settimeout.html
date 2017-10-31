@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+	var myVar;
+	var text1;
+
+	function myFunction() {
+		myVar = setInterval(alertFunc, 3000);
+		console.log('myVar' + myVar);
+	}
+
+	function alertFunc() {
+		document.getElementById("result").innerHTML = (document.getElementById("result").innerHTML + "Hello!");
+	}
+
+	myFunction();
+	
+
+</script>
+
+</head>
+<body>
+
+<div id="result">
+
+</div>
+
+<script>
+	document.getElementById("result").innerHTML = '';
+</script>
+
+
+
+</body>
+</html>
