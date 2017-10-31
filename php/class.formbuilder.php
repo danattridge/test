@@ -52,6 +52,12 @@
 						$formHtml .= '<div><label for"'.$control['name'].'">'.$control['label'].'</label><input type="password" name="'.$control['name'].'" id="'.$control['id'].'" class="'.$control['class'].'" value="'.$control['value'].'" /></div>';
 						break;
 					case 'select':
+						$formHtml .= '<label for="'.$control['name'].'">'.$control['label'].'</label>
+						  <select name="'.$control['name'].'"><option value="'select'">Select</option>';
+						  foreach ($control['options'] as $option){ 
+						      $formHtml .= '<option value="'.$option['value'].'">'.$option['label'].'</option>';
+						  }
+						  $formHtml .= '</select>';
 						break;
 					case 'checkbox':
 						break;
@@ -72,7 +78,7 @@
 				}
 			}
 			
-			$formHtml .= '<input type="hidden" name="formsubmitted" value="true" />';
+			$formHtml .= '<input type="hidden" name="submit" />';
 			
 			$formHtml .= '</form>';
 			
